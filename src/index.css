@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: headerFont;
+  src: url("assets\header_font.ttf");
+}
+
+@font-face {
+  font-family: TransatTextStandard;
+  src: url("assets\Transat W01 Standard.ttf");
+}
+
+:root {
+  font-family: TransatTextStandard, Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #50586d;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+p {
+  font-size: 1.5em;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
+}
+
+.link-underline {
+  border-bottom-width: 0;
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(#fff, #fff);
+  background-size: 0 3px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.2s ease-in-out;
+}
+
+.link-underline-black {
+  background-image: linear-gradient(transparent, transparent),
+    linear-gradient(rgb(139 92 246), rgb(139 92 246));
+}
+
+.link-underline:hover {
+  background-size: 100% 3px;
+  background-position: 0 100%;
+}
