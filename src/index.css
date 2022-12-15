@@ -17,6 +17,7 @@
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+  letter-spacing: -0.025em;
 
   color-scheme: light dark;
   color: #50586d;
@@ -35,12 +36,6 @@ body {
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-p {
-  font-size: 1.5em;
-  line-height: 1.6;
-  letter-spacing: -0.025em;
 }
 
 .link-underline {

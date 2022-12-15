@@ -1,14 +1,14 @@
 function HomePage() {
   return (
     <div>
-      <p className="">
+      <p className="text-2xl leading-relaxed">
         Three years ago, my life felt static. I was stuck in a job I was
         over-qualified for, making a crappy salary. The upside was that I had an
         incredible boss who let me disappear to the other side of the world on a
         whim when I couldn't figure out what came next and needed some
         *inspiration*.
       </p>
-      <p className="mt-6">
+      <p className="mt-6 text-2xl leading-relaxed">
         Fast forward, three years later, I celebrated my 27th birthday after
         spending the year backpacking Europe and seeing fifteen different
         countries in the span of three months. A few days after that birthday, I
@@ -19,16 +19,22 @@ function HomePage() {
         almost-seven years and had just completed the contract of the management
         position I had dreamed of, back when things felt static years ago.
       </p>
-      <p className="mt-6">
+      <p className="mt-6 text-2xl leading-relaxed">
         The thing is, once you achieve your goals and your dreams, life tends to
         feel static again.
       </p>
-      <p className="mt-6">The only place I knew I belonged, was abroad.</p>
-      <p className="mt-6">Thanks for stopping by to read about my journey.</p>
-      <p className="mt-6">
+      <p className="mt-6 text-2xl leading-relaxed">
+        The only place I knew I belonged, was abroad.
+      </p>
+      <p className="mt-6 text-2xl leading-relaxed">
+        Thanks for stopping by to read about my journey.
+      </p>
+      <p className="mt-6 text-2xl leading-relaxed">
         I hope through this, you may feel inspired to chase your dreams, too.
       </p>
-      <p className="mt-6">Lots of love, that girl solo backpacking.</p>
+      <p className="mt-6 text-2xl leading-relaxed">
+        Lots of love, that girl solo backpacking.
+      </p>
     </div>
   );
 }

@@ -7,6 +7,7 @@ import ErrorPage from "./ErrorPage";
 import "./index.css";
 import HomePage from "./HomePage";
 import ContactPage from "./Contact/ContactPage";
+import TravelMustHavesPage from "./TravelMustHavesPage";
 
 // use createHashRouter instead of createBrowserRouter to fix 404
 // error when refreshing /projects route on GitHub pages
@@ -23,6 +24,10 @@ const router = createHashRouter([
       {
         path: "/contact",
         element: <ContactPage />,
+      },
+      {
+        path: "/travel-must-haves",
+        element: <TravelMustHavesPage />,
       },
     ],
   },

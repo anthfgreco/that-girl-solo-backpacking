@@ -4,7 +4,11 @@ function Form() {
   const [state, handleSubmit] = useForm("xpznvvvg");
 
   if (state.succeeded) {
-    return <p>Thanks for contacting me, we'll be in touch shortly.</p>;
+    return (
+      <p className="text-2xl leading-relaxed">
+        Thanks for contacting me, we'll be in touch shortly.
+      </p>
+    );
   }
 
   return (
