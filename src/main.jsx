@@ -2,13 +2,15 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 
+import "./index.css";
+
 import App from "./App";
 import ErrorPage from "./ErrorPage";
-import "./index.css";
 import HomePage from "./HomePage";
 import ContactPage from "./Contact/ContactPage";
 import TravelMustHavesPage from "./TravelMustHavesPage";
 import BlogPage from "./BlogPage";
+import DestinationsPage from "./DestinationsPage";
 
 // use createHashRouter instead of createBrowserRouter to fix 404
 // error when refreshing /projects route on GitHub pages
@@ -25,6 +27,10 @@ const router = createHashRouter([
       {
         path: "/blog",
         element: <BlogPage />,
+      },
+      {
+        path: "/destinations",
+        element: <DestinationsPage />,
       },
       {
         path: "/travel-must-haves",
