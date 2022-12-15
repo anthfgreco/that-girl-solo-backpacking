@@ -52,7 +52,7 @@ function Form() {
       <button
         type="submit"
         disabled={state.submitting}
-        className="mt-3 rounded-lg bg-blue-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto md:w-1/3"
+        className="mt-3 rounded-lg bg-blue-700 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto md:w-1/3"
       >
         Submit
       </button>
