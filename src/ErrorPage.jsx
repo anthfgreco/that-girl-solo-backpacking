@@ -6,11 +6,11 @@ function ErrorPage() {
 
   return (
     <div className="flex h-screen	w-screen flex-col items-center justify-center">
-      <h1 className="text-3xl font-semibold">Oops!</h1>
+      <h1 className="text-4xl font-semibold">Oops!</h1>
 
       <br />
 
-      <p>
+      <p className="text-xl">
         Sorry, we can't find that page. Go back to the
         <Link
           to="/"

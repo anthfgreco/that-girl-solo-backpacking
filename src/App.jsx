@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App p-5 sm:w-full md:w-[700px]">
       <Link to="/">
-        <h1 className="text-center font-['headerFont'] text-4xl font-bold text-purple-600">
+        <h1 className="mb-5 text-center font-['headerFont'] text-4xl font-bold text-purple-600">
           That Girl Solo Backpacking
         </h1>
       </Link>

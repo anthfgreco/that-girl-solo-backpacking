@@ -8,7 +8,7 @@ function NavBar() {
   };
 
   return (
-    <nav className="mt-5 flex items-center justify-between">
+    <nav className="flex items-center justify-between">
       <NavLink
         to="/"
         className="link-underline link-underline-black p-3 text-xl font-semibold text-[#202020] dark:text-[#ededed]"

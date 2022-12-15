@@ -12,7 +12,7 @@ function Form() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-4 flex flex-col">
+    <form onSubmit={handleSubmit} className="flex flex-col">
       <label htmlFor="name" className="text-xl">
         Name
       </label>
@@ -21,11 +21,11 @@ function Form() {
         type="text"
         name="name"
         required
-        className="rounded-lg border-2 border-gray-300 p-1 focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+        className="mb-3 rounded-lg border-2 border-gray-300 p-1 focus:border-blue-500 focus:outline-none focus:ring-blue-500"
       />
       <ValidationError prefix="Name" field="name" errors={state.errors} />
 
-      <label htmlFor="email" className="mt-3 text-xl">
+      <label htmlFor="email" className="text-xl">
         Email Address
       </label>
       <input
@@ -33,11 +33,11 @@ function Form() {
         type="email"
         name="email"
         required
-        className="rounded-lg border-2 border-gray-300 p-1 focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+        className="mb-3 rounded-lg border-2 border-gray-300 p-1 focus:border-blue-500 focus:outline-none focus:ring-blue-500"
       />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-      <label htmlFor="message" className="mt-3 text-xl">
+      <label htmlFor="message" className="text-xl">
         Message
       </label>
       <textarea
@@ -45,14 +45,14 @@ function Form() {
         name="message"
         rows="5"
         required
-        className="rounded-lg border-2 border-gray-300 p-1 focus:border-blue-500 focus:outline-none focus:ring-blue-500"
+        className="mb-3 rounded-lg border-2 border-gray-300 p-1 focus:border-blue-500 focus:outline-none focus:ring-blue-500"
       />
       <ValidationError prefix="Message" field="message" errors={state.errors} />
 
       <button
         type="submit"
         disabled={state.submitting}
-        className="mt-3 rounded-lg bg-blue-700 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto md:w-1/3"
+        className="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-xl font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto md:w-1/3"
       >
         Submit
       </button>
