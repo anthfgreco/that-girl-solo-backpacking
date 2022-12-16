@@ -51,7 +51,14 @@ const getPosts = () => {
         const timestamp = new Date(metadata.date).getTime() / 1000;
         post = {
           id: timestamp,
-          title: metadata.title ? metadata.title : "No title given",
+          // URL slug, converts title to lowercase, removes non-alphanumeric characters, and replaces spaces with hyphens
+          // Ex.  "The benefits of backpacking + carry-on, versus bringing a luggage" ->
+          //      "the-benefits-of-backpacking-carry-on-versus-bringing-a-luggage"
+          titleUrl: metadata.title
+            .toLowerCase()
+            .replace(/[^a-z0-9\ \-]+/g, "")
+            .replace(/[ ]+/g, "-"),
+          titleString: metadata.title ? metadata.title : "No title given",
           author: metadata.author ? metadata.author : "No author given",
           date: metadata.date ? metadata.date : "No date given",
           content: content ? content : "No content given",

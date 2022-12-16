@@ -26,7 +26,7 @@ const router = createHashRouter(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       <Route path="/" element={<HomePage />}></Route>
       <Route path="/blog" element={<BlogPage />}></Route>
-      <Route path="/blog/:id" element={<Post />}></Route>
+      <Route path="/blog/:titleUrl" element={<Post />}></Route>
       <Route path="/destinations" element={<DestinationsPage />}></Route>
       <Route
         path="/travel-must-haves"
