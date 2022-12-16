@@ -1,10 +1,12 @@
 import ReactMarkdown from "react-markdown";
-import postJson from "./posts.json";
+import postJson from "../posts.json";
 import { Link } from "react-router-dom";
 
-function BlogPage() {
+function BlogMainPage() {
+  let excerptNumWords = 35;
+
   const excerptList = postJson.map((post) => {
-    return post.content.split(" ").slice(0, 20).join(" ") + "...";
+    return post.content.split(" ").slice(0, excerptNumWords).join(" ") + "...";
   });
 
   return (
@@ -36,4 +38,4 @@ function BlogPage() {
   );
 }
 
-export default BlogPage;
+export default BlogMainPage;

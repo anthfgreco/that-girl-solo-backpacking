@@ -1,9 +1,9 @@
 import ReactMarkdown from "react-markdown";
 import { useParams } from "react-router-dom";
-import markdownComponents from "./MarkdownStyling";
-import postJson from "./posts.json";
+import markdownComponents from "../MarkdownStyling";
+import postJson from "../posts.json";
 
-function Post() {
+function BlogPost() {
   let params = useParams();
   let userTitleUrl = params.titleUrl;
 
@@ -34,4 +34,4 @@ function Post() {
   );
 }
 
-export default Post;
+export default BlogPost;
