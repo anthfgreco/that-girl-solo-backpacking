@@ -10,10 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set author identity
-      - run: |
-              git config --global user.name "anthfgreco"
-              git config --global user.email "anthony1.greco@ryerson.ca"
+      - name: Set up Git
+        uses: actions/setup-git@v2
+        with:
+          user_name: Anthony Greco
+          user_email: anthony1.greco@ryerson.ca
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
