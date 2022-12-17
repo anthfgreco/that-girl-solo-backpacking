@@ -11,10 +11,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Set up Git
-        uses: actions/setup-git@v2
-        with:
-          user_name: Anthony Greco
-          user_email: anthony1.greco@ryerson.ca
+        run: |
+          git config --global user.email "anthony1.greco@ryerson.ca"
+          git config --global user.name "Anthony Greco"
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
