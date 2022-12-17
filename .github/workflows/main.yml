@@ -16,6 +16,9 @@ jobs:
           git config --global user.name "Anthony Greco"
       - name: Set up Git SSH key
         run: |
+          mkdir ~/.ssh
+          touch ~/.ssh/known_hosts
+          touch ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
