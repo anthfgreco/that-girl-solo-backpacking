@@ -12,7 +12,6 @@ function BlogMainPage() {
 
   return (
     <div className="postlist">
-      <p>TESTING</p>
       {postJson.map((post, i) => {
         return (
           <div key={i} className="post-card">
