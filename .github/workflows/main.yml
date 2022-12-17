@@ -10,10 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Set up Git
+      - name: Set up Git user identification
         run: |
           git config --global user.email "anthony1.greco@ryerson.ca"
           git config --global user.name "Anthony Greco"
+      - name: Set up Git SSH key
+        run: |
+          ssh-keyscan github.com >> ~/.ssh/known_hosts
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
       - name: Set up Node.js
         uses: actions/setup-node@v2
         with:
