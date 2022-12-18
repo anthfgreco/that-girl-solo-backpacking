@@ -22,7 +22,7 @@ function BlogPost() {
 
   return (
     <div>
-      <h1 className="mb-2 text-4xl text-black">{fetchedPost.titleString}</h1>
+      <h1 className="mb-2 text-4xl">{fetchedPost.titleString}</h1>
       <p className="mb-12">
         Published on {fetchedPost.date} {/*by {fetchedPost.author}*/}
       </p>
