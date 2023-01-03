@@ -8,7 +8,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App w-screen">
+    <div className="App h-full w-screen">
       <Header />
 
       <br />
