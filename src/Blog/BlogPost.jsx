@@ -13,7 +13,7 @@ function BlogPost() {
   );
 
   return (
-    <article className="mx-7 mb-7 w-auto lg:mx-auto lg:w-[675px]">
+    <article>
       <h1 className="mb-2 text-4xl">{fetchedPost.titleString}</h1>
       <p className="mb-12">Posted on {fetchedPost.date}</p>
       <ReactMarkdown

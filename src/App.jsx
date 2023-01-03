@@ -14,8 +14,9 @@ function App() {
       <br />
 
       <br />
-
-      <Outlet />
+      <div className="mx-10 mb-7 w-auto lg:mx-auto lg:max-w-[675px]">
+        <Outlet />
+      </div>
     </div>
   );
 }
