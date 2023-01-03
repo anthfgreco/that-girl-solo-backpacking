@@ -1,7 +1,7 @@
 function TravelMustHavesPage() {
   return (
-    <div>
-      <ol className="list-inside list-decimal text-2xl leading-relaxed">
+    <div className="">
+      <ol className="list-inside list-decimal text-center text-2xl leading-relaxed">
         <li>Back-up battery pack </li>
         <li>Micro fiber Towel </li>
         <li>Bum bag </li>
