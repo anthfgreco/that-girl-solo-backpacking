@@ -19,7 +19,7 @@ function BlogMainPage() {
             <div key={i} className="m-4 flex w-64 flex-col items-center">
               <Link to={`/blog/${post.titleUrl}`} className="overflow-hidden">
                 <img
-                  src={"src/assets/" + post.image}
+                  src={"images/" + post.image}
                   alt="Blog image"
                   className="h-52 w-full object-contain"
                 />

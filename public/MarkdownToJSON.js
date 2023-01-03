@@ -1,6 +1,6 @@
 import fs from "fs";
 
-const markdownFolderPath = "public/content";
+const markdownFolderPath = "public/posts";
 let postlist = [];
 const writeJsonPath = "src/posts.json";
 
