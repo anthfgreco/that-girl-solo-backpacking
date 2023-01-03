@@ -7,8 +7,8 @@ function BlogPost() {
   let params = useParams();
   let userTitleUrl = params.titleUrl;
 
+  // Fetch post from posts.json
   let fetchedPost = {};
-
   postJson.forEach((post, i) => {
     if (userTitleUrl == post.titleUrl) {
       fetchedPost.titleString = post.titleString

@@ -61,6 +61,7 @@ const getPosts = () => {
           titleString: metadata.title ? metadata.title : "No title given",
           author: metadata.author ? metadata.author : "No author given",
           date: metadata.date ? metadata.date : "No date given",
+          image: metadata.image ? metadata.image : "No image given",
           content: content ? content : "No content given",
         };
         console.log(post);
