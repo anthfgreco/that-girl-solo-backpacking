@@ -7,3 +7,5 @@ function DestinationsPage() {
 }
 
 export default DestinationsPage;
+
+// https://simplemaps.com/custom/world/3tNfIb2j
