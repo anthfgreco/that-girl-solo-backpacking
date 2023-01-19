@@ -8,13 +8,13 @@ function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App h-full w-screen">
+    <div className="App h-screen w-screen">
       <Header />
 
       <br />
 
       <br />
-      <div className="mx-10 mb-7 w-auto lg:mx-auto lg:max-w-[675px]">
+      <div className="mx-10 lg:mx-auto lg:max-w-[675px]">
         <Outlet />
       </div>
     </div>
