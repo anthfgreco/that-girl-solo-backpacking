@@ -1,7 +1,10 @@
+import SolidHeader from "../Headers/SolidHeader";
+
 function TravelMustHavesPage() {
   return (
     <div className="">
-      <ol className="list-inside list-decimal text-center text-2xl leading-relaxed">
+      <SolidHeader />
+      <ol className="list-inside list-decimal text-center text-xl leading-relaxed">
         <li>Back-up battery pack </li>
         <li>Micro fiber Towel </li>
         <li>Bum bag </li>

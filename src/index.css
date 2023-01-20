@@ -3,21 +3,25 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: headerFont;
+  font-family: HeaderFont;
   src: url("assets/PlayfairDisplay-VariableFont_wght.ttf");
 }
 
 @font-face {
-  font-family: TransatTextStandard;
-  src: url("assets/Transat-Standard.ttf");
+  font-family: WorkSans;
+  src: url("assets/WorkSans-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Lora;
+  src: url("assets/Lora-VariableFont_wght.ttf");
 }
 
 :root {
-  font-family: TransatTextStandard, Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-family: Lora, Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 17.5px;
+  line-height: 1.8rem;
   font-weight: 400;
-  letter-spacing: -0.025em;
 
   box-sizing: border-box;
   overflow-x: hidden;

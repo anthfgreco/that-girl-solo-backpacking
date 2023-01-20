@@ -1,6 +1,9 @@
+import SolidHeader from "../Headers/SolidHeader";
+
 function DestinationsPage() {
   return (
     <div>
+      <SolidHeader />
       <p>to do</p>
     </div>
   );
