@@ -4,6 +4,11 @@
 
 @font-face {
   font-family: HeaderFont;
+  src: url("assets/header-font.ttf");
+}
+
+@font-face {
+  font-family: Playfair;
   src: url("assets/PlayfairDisplay-VariableFont_wght.ttf");
 }
 
@@ -15,6 +20,11 @@
 @font-face {
   font-family: Lora;
   src: url("assets/Lora-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: AnnieUseYourTelescope;
+  src: url("assets/AnnieUseYourTelescope-Regular.ttf");
 }
 
 :root {

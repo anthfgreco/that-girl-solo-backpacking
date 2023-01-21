@@ -16,7 +16,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
       {/* Hamburger icon for small screen or title for large screen */}
       <div className="flex w-full lg:w-fit">
         <Link to="/" className="m-auto p-2">
-          <header className="font-['HeaderFont'] text-3xl">
+          <header className="font-['AnnieUseYourTelescope'] text-5xl">
             That Girl Solo Backpacking
           </header>
         </Link>
@@ -56,15 +56,16 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
         */}
 
         <nav
-          className={
+          className={`font-['AnnieUseYourTelescope'] text-2xl ${
             isNavOpen
               ? "flex flex-col lg:flex lg:flex-row lg:items-center lg:justify-end"
-              : "flex flex-row items-center justify-end"
+              : "flex flex-row items-center justify-end space-x-2"
           }
+          `}
         >
           <NavLink
             to="/blog"
-            className="py-3 text-lg lg:p-3"
+            className="py-3 lg:p-3"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => setIsNavOpen(false)}
           >
@@ -73,7 +74,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
 
           <NavLink
             to="/destinations"
-            className="py-3 text-lg lg:p-3"
+            className="py-3 lg:p-3"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => setIsNavOpen(false)}
           >
@@ -82,7 +83,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
 
           <NavLink
             to="/travel-must-haves"
-            className="py-3 text-lg lg:p-3"
+            className="py-3 lg:p-3"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => setIsNavOpen(false)}
           >
@@ -91,7 +92,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
 
           <NavLink
             to="/contact"
-            className="py-3 text-lg lg:p-3"
+            className="py-3 lg:p-3"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => setIsNavOpen(false)}
           >
