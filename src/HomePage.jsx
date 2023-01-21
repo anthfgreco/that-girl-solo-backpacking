@@ -25,7 +25,11 @@ function HomePage() {
     <div className="">
       <TransparentHeader />
       <div className="fixed -z-10 h-screen w-screen bg-[url('/images/pexels-roberto-nickson-2559941.jpg')] bg-center bg-no-repeat" />
-      <div className="h-screen"></div>
+      <div className="flex h-screen items-center justify-center">
+        <h1 className="text-center font-['AnnieUseYourTelescope'] text-3xl tracking-wider text-white">
+          Ur travel the world bestie
+        </h1>
+      </div>
       <div className="bg-white">
         <ReactMarkdown children={markdown} components={markdownComponents} />
       </div>

@@ -56,7 +56,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
         */}
 
         <nav
-          className={`font-['AnnieUseYourTelescope'] text-2xl ${
+          className={`font-['AnnieUseYourTelescope'] text-[1.65rem] ${
             isNavOpen
               ? "flex flex-col lg:flex lg:flex-row lg:items-center lg:justify-end"
               : "flex flex-row items-center justify-end space-x-2"

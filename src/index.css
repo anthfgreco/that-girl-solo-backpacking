@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: HeaderFont;
-  src: url("assets/header-font.ttf");
+  font-family: Pacifico;
+  src: url("assets/Pacifico.ttf");
 }
 
 @font-face {
