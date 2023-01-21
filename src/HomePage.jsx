@@ -60,9 +60,13 @@ function HomePage() {
           <FaArrowDown />
         </span>
       </div>
-      <article className="bg-white">
-        <ReactMarkdown children={markdown} components={markdownComponents} />
-      </article>
+
+      <div className="bg-white">
+        <br />
+        <article>
+          <ReactMarkdown children={markdown} components={markdownComponents} />
+        </article>
+      </div>
     </div>
   );
 }

@@ -6,15 +6,17 @@ const markdownComponents = {
     </p>
   ),
   h2: ({ children }) => (
-    <h2 className="mb-6 mt-9 text-2xl leading-relaxed">{children}</h2>
+    <h2 className="mx-10 mb-6 mt-9 text-2xl leading-relaxed lg:mx-auto lg:max-w-[650px]">
+      {children}
+    </h2>
   ),
   ul: ({ children }) => (
-    <ul className="ml-4 list-disc text-2xl leading-relaxed md:ml-0">
+    <ul className="mx-10 list-disc space-y-2 leading-relaxed md:ml-0 lg:mx-auto lg:max-w-[550px]">
       {children}
     </ul>
   ),
   ol: ({ children }) => (
-    <ol className="ml-4 list-decimal text-xl leading-relaxed md:ml-0">
+    <ol className="mx-10 list-decimal space-y-2 leading-relaxed md:ml-0 lg:mx-auto lg:max-w-[550px]">
       {children}
     </ol>
   ),

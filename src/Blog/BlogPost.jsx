@@ -18,8 +18,12 @@ function BlogPost() {
       <SolidHeader />
 
       <article>
-        <h1 className="mx-auto mb-2 text-3xl">{fetchedPost.titleString}</h1>
-        <p className="mb-12">Posted on {fetchedPost.date}</p>
+        <h1 className="mx-10 mb-2 text-3xl lg:mx-auto lg:max-w-[650px]">
+          {fetchedPost.titleString}
+        </h1>
+        <p className="mx-10 mb-12 lg:mx-auto lg:max-w-[650px]">
+          Posted on {fetchedPost.date}
+        </p>
         <ReactMarkdown
           children={fetchedPost.content}
           components={markdownComponents}
