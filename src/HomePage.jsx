@@ -1,4 +1,7 @@
+import { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+import { FaArrowDown } from "react-icons/fa";
+
 import markdownComponents from "./MarkdownStyling";
 import TransparentHeader from "./Headers/TransparentHeader";
 
@@ -21,18 +24,45 @@ let markdown = `
   `;
 
 function HomePage() {
+  const [arrowOpacity, setArrowOpacity] = useState(0);
+
+  // Scroll listener
+  // Resize listener to make arrow responsive to window resizing
+  useEffect(() => {
+    window.addEventListener("scroll", updateArrow);
+    window.addEventListener("resize", updateArrow);
+    return () => {
+      window.removeEventListener("scroll", updateArrow);
+      window.removeEventListener("resize", updateArrow);
+    };
+  }, []);
+
+  function updateArrow() {
+    let opacity = window.scrollY / (window.innerHeight / 2);
+    opacity = 1 - opacity;
+    opacity = opacity.toFixed(2);
+    console.log(opacity);
+    setArrowOpacity(opacity);
+  }
+
   return (
     <div className="">
       <TransparentHeader />
       <div className="fixed -z-10 h-screen w-screen bg-[url('/images/pexels-roberto-nickson-2559941.jpg')] bg-center bg-no-repeat" />
-      <div className="flex h-screen items-center justify-center">
+      <div className="flex h-screen flex-col items-center justify-center">
         <h1 className="text-center font-['AnnieUseYourTelescope'] text-3xl tracking-wider text-white">
           Ur travel the world bestie
         </h1>
+        <span
+          className="absolute bottom-1 animate-bounce text-2xl text-white"
+          style={{ opacity: arrowOpacity }}
+        >
+          <FaArrowDown />
+        </span>
       </div>
-      <div className="bg-white">
+      <article className="bg-white">
         <ReactMarkdown children={markdown} components={markdownComponents} />
-      </div>
+      </article>
     </div>
   );
 }

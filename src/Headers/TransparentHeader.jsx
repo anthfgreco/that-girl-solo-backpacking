@@ -6,15 +6,14 @@ function TransparentHeader() {
   const [isHeaderTransparent, setHeaderTransparent] = useState(true);
 
   // Scroll listener
+  // Resize listener to make header responsive to window resizing
   useEffect(() => {
     window.addEventListener("scroll", updateTransparency);
-    return () => window.removeEventListener("scroll", updateTransparency);
-  }, []);
-
-  // Resize listener
-  useEffect(() => {
     window.addEventListener("resize", updateTransparency);
-    return () => window.removeEventListener("resize", updateTransparency);
+    return () => {
+      window.removeEventListener("scroll", updateTransparency);
+      window.removeEventListener("resize", updateTransparency);
+    };
   }, []);
 
   // Make header transparent after a full page scroll
