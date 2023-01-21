@@ -15,18 +15,18 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
     >
       {/* Hamburger icon for small screen or title for large screen */}
       <div className="flex w-full lg:w-fit">
+        <Link to="/" className="m-auto p-2">
+          <header className="font-['HeaderFont'] text-3xl">
+            That Girl Solo Backpacking
+          </header>
+        </Link>
+
         <button
           className="ml-5 p-2 text-3xl lg:hidden"
           onClick={() => setIsNavOpen(!isNavOpen)}
         >
           <FaBars />
         </button>
-
-        <Link to="/" className="m-auto p-2">
-          <header className="font-['HeaderFont'] text-3xl">
-            That Girl Solo Backpacking
-          </header>
-        </Link>
       </div>
 
       <div className={isNavOpen ? "" : "hidden lg:block"}>
