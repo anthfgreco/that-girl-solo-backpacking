@@ -24,7 +24,7 @@ let markdown = `
   `;
 
 function HomePage() {
-  const [arrowOpacity, setArrowOpacity] = useState(0);
+  const [arrowOpacity, setArrowOpacity] = useState(1.0);
 
   // Scroll listener
   // Resize listener to make arrow responsive to window resizing
@@ -38,10 +38,7 @@ function HomePage() {
   }, []);
 
   function updateArrow() {
-    let opacity = window.scrollY / (window.innerHeight / 2);
-    opacity = 1 - opacity;
-    opacity = opacity.toFixed(2);
-    console.log(opacity);
+    let opacity = 1 - window.scrollY / (window.innerHeight / 2);
     setArrowOpacity(opacity);
   }
 
