@@ -16,7 +16,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
       {/* Hamburger icon for small screen or title for large screen */}
       <div className="flex w-full lg:w-fit">
         <Link to="/" className="m-auto p-2">
-          <header className="font-['AnnieUseYourTelescope'] text-5xl">
+          <header className="whitespace-nowrap font-['AnnieUseYourTelescope'] text-4xl lg:text-5xl">
             That Girl Solo Backpacking
           </header>
         </Link>

@@ -18,7 +18,7 @@ function BlogPost() {
       <SolidHeader />
 
       <article>
-        <h1 className="mx-10 mb-2 text-3xl lg:mx-auto lg:max-w-[650px]">
+        <h1 className="mx-10 mb-2 text-3xl font-bold lg:mx-auto lg:max-w-[650px]">
           {fetchedPost.titleString}
         </h1>
         <p className="mx-10 mb-12 lg:mx-auto lg:max-w-[650px]">
