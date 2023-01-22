@@ -7,7 +7,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
 
   return (
     <div
-      className={`fixed flex w-screen items-center p-4 lg:h-[80px] lg:flex-row lg:place-content-between ${
+      className={`fixed flex w-screen flex-col p-4 lg:h-[80px] lg:flex-row lg:place-content-between lg:items-center ${
         isHeaderTransparent
           ? "bg-gradient-to-b from-black/25 text-white"
           : "bg-white text-black"
@@ -16,7 +16,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
       {/* Hamburger icon for small screen or title for large screen */}
       <div className="flex w-full lg:w-fit">
         <Link to="/" className="m-auto p-2">
-          <header className="whitespace-nowrap font-['AnnieUseYourTelescope'] text-4xl lg:text-5xl">
+          <header className="font-['AnnieUseYourTelescope'] text-5xl">
             That Girl Solo Backpacking
           </header>
         </Link>
@@ -58,14 +58,14 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
         <nav
           className={`font-['AnnieUseYourTelescope'] text-[1.65rem] ${
             isNavOpen
-              ? "flex flex-col lg:flex lg:flex-row lg:items-center lg:justify-end"
+              ? "fixed left-0 top-0 flex h-screen w-2/3 flex-col bg-white text-black"
               : "flex flex-row items-center justify-end space-x-2"
           }
           `}
         >
           <NavLink
             to="/blog"
-            className="py-3 lg:p-3"
+            className="p-4"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => setIsNavOpen(false)}
           >
@@ -74,7 +74,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
 
           <NavLink
             to="/destinations"
-            className="py-3 lg:p-3"
+            className="p-4"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => setIsNavOpen(false)}
           >
@@ -83,7 +83,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
 
           <NavLink
             to="/travel-must-haves"
-            className="py-3 lg:p-3"
+            className="p-4"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => setIsNavOpen(false)}
           >
@@ -92,13 +92,20 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
 
           <NavLink
             to="/contact"
-            className="py-3 lg:p-3"
+            className="p-4"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => setIsNavOpen(false)}
           >
             Contact
           </NavLink>
         </nav>
+
+        <div
+          className={`fixed right-0 top-0 h-screen w-1/3 bg-black opacity-75 ${
+            isNavOpen ? "" : "hidden"
+          }`}
+          onClick={() => setIsNavOpen(false)}
+        ></div>
       </div>
     </div>
   );
