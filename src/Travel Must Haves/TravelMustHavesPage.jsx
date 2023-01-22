@@ -4,7 +4,7 @@ function TravelMustHavesPage() {
   return (
     <div className="">
       <SolidHeader />
-      <ol className="list-inside list-decimal text-center text-xl leading-relaxed">
+      <ol className="mx-10 mb-6 list-decimal space-y-2 leading-relaxed lg:mx-auto lg:max-w-[550px]">
         <li>Back-up battery pack </li>
         <li>Micro fiber Towel </li>
         <li>Bum bag </li>

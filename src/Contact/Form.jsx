@@ -13,7 +13,7 @@ function Form() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col">
-      <label htmlFor="name" className="text-lg">
+      <label htmlFor="name" className="">
         Name
       </label>
       <input
@@ -25,7 +25,7 @@ function Form() {
       />
       <ValidationError prefix="Name" field="name" errors={state.errors} />
 
-      <label htmlFor="email" className="text-lg">
+      <label htmlFor="email" className="">
         Email Address
       </label>
       <input
@@ -37,7 +37,7 @@ function Form() {
       />
       <ValidationError prefix="Email" field="email" errors={state.errors} />
 
-      <label htmlFor="message" className="text-lg">
+      <label htmlFor="message" className="">
         Message
       </label>
       <textarea
@@ -52,7 +52,7 @@ function Form() {
       <button
         type="submit"
         disabled={state.submitting}
-        className="rounded-lg bg-blue-700 px-5 py-2.5 text-center text-lg font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto md:w-1/3"
+        className="rounded-lg bg-blue-700 px-5 py-2.5 text-center font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 sm:w-auto md:w-1/3"
       >
         Submit
       </button>
