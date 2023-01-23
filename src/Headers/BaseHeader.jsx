@@ -30,31 +30,6 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
       </div>
 
       <div className={isNavOpen ? "" : "hidden lg:block"}>
-        {/*
-        <div className="flex justify-end">
-          <div className="mr-5 flex items-center space-x-4 text-lg text-white">
-            <Link className="" to="/contact">
-              <FaEnvelope />
-            </Link>
-            <a
-              className=""
-              href="https://www.tiktok.com/@thatgirlsolobackpacking"
-              target="_blank"
-            >
-              <FaTiktok />
-            </a>
-          </div>
-          <div className="relative">
-            <FaSearch className="absolute top-1.5 left-1" />
-            <input
-              type="text"
-              placeholder="Search this site"
-              className="pl-8 text-lg"
-            />
-          </div>
-        </div>
-        */}
-
         <nav
           className={`font-['AnnieUseYourTelescope'] text-[1.65rem] ${
             isNavOpen
