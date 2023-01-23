@@ -47,6 +47,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
             Blog
           </NavLink>
 
+          {/*
           <NavLink
             to="/destinations"
             className="p-4"
@@ -55,6 +56,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
           >
             Destinations
           </NavLink>
+          */}
 
           <NavLink
             to="/travel-must-haves"
@@ -73,6 +75,14 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
           >
             Contact
           </NavLink>
+
+          <a
+            href="https://www.tiktok.com/@thatgirlsolobackpacking"
+            target="_blank"
+            className="p-4"
+          >
+            <FaTiktok />
+          </a>
         </nav>
 
         <div

@@ -21,7 +21,7 @@ function BlogMainPage() {
           {postJson.map((post, i) => {
             return (
               <div key={i} className="m-4 flex w-64 flex-col items-center">
-                <Link to={`/blog/${post.titleUrl}`} className="overflow-hidden">
+                <Link to={`/blog/${post.titleUrl}`}>
                   <img
                     src={"images/" + post.image}
                     alt="Blog image"

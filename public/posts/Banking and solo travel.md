@@ -2,7 +2,7 @@
 title: Banking and solo travel
 author: Nadia Greco
 date: December 12, 2022
-image: example1.jpg
+image: banking.jpg
 ---
 
 Prior to deciding to run free and disappearing to the other side of the world, I had been a banker for seven years. Through that time, I learned a lot of skills to benefit me in the day-to-day. Mostly, I had been grateful that I had learned everything there was to know about a mortgage for when would eventually be the big day.

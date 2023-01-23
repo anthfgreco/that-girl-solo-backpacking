@@ -2,7 +2,7 @@
 title: The benefits of backpacking + carry-on, versus bringing a luggage
 author: Nadia Greco
 date: December 14, 2022
-image: example3.jpg
+image: luggage.jpg
 ---
 
 Reasons to avoid bringing a luggage on your next trip:

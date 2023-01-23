@@ -2,7 +2,7 @@
 title: Solo travel guided tour? Or solo travel?
 author: Nadia Greco
 date: December 16, 2022
-image: example2.jpg
+image: parasail.jpg
 ---
 
 So you're thinking about solo travelling?

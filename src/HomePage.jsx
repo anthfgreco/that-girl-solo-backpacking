@@ -46,10 +46,13 @@ function HomePage() {
     <div className="">
       <TransparentHeader />
       <div className="fixed -z-10 h-screen w-screen bg-[url('/images/pexels-roberto-nickson-2559941.jpg')] bg-center bg-no-repeat" />
-      <div className="flex h-screen flex-col items-center justify-center">
-        <h1 className="text-center font-['AnnieUseYourTelescope'] text-3xl tracking-wider text-white">
+      <div className="flex h-screen flex-col items-center justify-center bg-black bg-opacity-10">
+        {/*
+        <h1 className="text-center font-['Lora'] text-xl tracking-wide text-white">
           Ur travel the world bestie
         </h1>
+        */}
+
         <span
           className="absolute bottom-1 animate-bounce text-2xl text-white"
           style={{ opacity: arrowOpacity }}
