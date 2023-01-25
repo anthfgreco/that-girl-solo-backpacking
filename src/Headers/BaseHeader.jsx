@@ -7,22 +7,25 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
 
   return (
     <div
-      className={`fixed flex w-screen flex-col p-4 lg:h-[80px] lg:flex-row lg:place-content-between lg:items-center ${
+      className={`fixed flex h-20 w-screen flex-col p-3 lg:flex-row lg:place-content-between lg:items-center ${
         isHeaderTransparent
           ? "bg-gradient-to-b from-black/25 text-white"
           : "bg-white text-black"
       }`}
     >
       {/* Hamburger icon for small screen or title for large screen */}
-      <div className="flex w-full lg:w-fit">
-        <Link to="/" className="m-auto p-2">
-          <header className="font-['AnnieUseYourTelescope'] text-5xl">
+      <div className="flex w-full items-center justify-center lg:w-fit">
+        <Link
+          to="/"
+          className={`p-2 ${isHeaderTransparent ? "hidden" : "block"}`}
+        >
+          <header className="whitespace-nowrap font-annieUseYourTelescope text-3xl lg:text-5xl">
             That Girl Solo Backpacking
           </header>
         </Link>
 
         <button
-          className="ml-5 p-2 text-3xl lg:hidden"
+          className="ml-auto p-2 text-3xl lg:hidden"
           onClick={() => setIsNavOpen(!isNavOpen)}
         >
           <FaBars />
@@ -31,13 +34,22 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
 
       <div className={isNavOpen ? "" : "hidden lg:block"}>
         <nav
-          className={`font-['AnnieUseYourTelescope'] text-[1.65rem] ${
+          className={`font-annieUseYourTelescope text-[1.65rem] ${
             isNavOpen
               ? "fixed left-0 top-0 flex h-screen w-2/3 flex-col bg-white text-black"
               : "flex flex-row items-center justify-end space-x-2"
           }
           `}
         >
+          <NavLink
+            to="/"
+            className="p-4"
+            style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            onClick={() => setIsNavOpen(false)}
+          >
+            Home
+          </NavLink>
+
           <NavLink
             to="/blog"
             className="p-4"

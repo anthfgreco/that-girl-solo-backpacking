@@ -43,7 +43,7 @@ function BlogPost() {
         style={{ backgroundImage: `url(${"/images/" + fetchedPost.image})` }}
       ></div>
       <div className="flex h-screen flex-col items-center justify-center bg-black bg-opacity-25">
-        <h1 className="mx-auto mb-4 text-center font-['AnnieUseYourTelescope'] text-5xl tracking-wider text-white lg:mx-60">
+        <h1 className="mx-auto mb-4 text-center font-annieUseYourTelescope text-5xl tracking-wider text-white lg:mx-60">
           {fetchedPost.titleString}
         </h1>
         <p className="text-white">Posted on {fetchedPost.date}</p>

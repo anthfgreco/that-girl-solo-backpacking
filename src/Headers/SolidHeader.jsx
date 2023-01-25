@@ -12,7 +12,7 @@ function SolidHeader() {
         isHeaderTransparent={isHeaderTransparent}
         setIsNavOpen={setIsNavOpen}
       />
-      <div className="h-[160px] lg:h-[105px]"></div>
+      <div className="h-24"></div>
     </div>
   );
 }

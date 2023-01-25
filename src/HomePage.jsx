@@ -47,11 +47,9 @@ function HomePage() {
       <TransparentHeader />
       <div className="fixed -z-10 h-screen w-screen bg-[url('/images/pexels-roberto-nickson-2559941.jpg')] bg-center bg-no-repeat" />
       <div className="flex h-screen flex-col items-center justify-center bg-black bg-opacity-10">
-        {/*
-        <h1 className="text-center font-['Lora'] text-xl tracking-wide text-white">
-          Ur travel the world bestie
+        <h1 className="mx-auto text-center font-annieUseYourTelescope text-6xl tracking-wider text-white">
+          That Girl Solo Backpacking
         </h1>
-        */}
 
         <span
           className="absolute bottom-1 animate-bounce text-2xl text-white"

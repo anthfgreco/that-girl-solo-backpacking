@@ -1,32 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@font-face {
-  font-family: Pacifico;
-  src: url("assets/Pacifico.ttf");
-}
-
-@font-face {
-  font-family: Playfair;
-  src: url("assets/PlayfairDisplay-VariableFont_wght.ttf");
-}
-
-@font-face {
-  font-family: WorkSans;
-  src: url("assets/WorkSans-VariableFont_wght.ttf");
-}
-
-@font-face {
-  font-family: Lora;
-  src: url("assets/Lora-VariableFont_wght.ttf");
-}
-
-@font-face {
-  font-family: AnnieUseYourTelescope;
-  src: url("assets/AnnieUseYourTelescope-Regular.ttf");
-}
-
 :root {
   font-family: Lora, Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 17.5px;
