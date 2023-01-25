@@ -64,6 +64,7 @@ function HomePage() {
         <article>
           <ReactMarkdown children={markdown} components={markdownComponents} />
         </article>
+        <br />
       </div>
     </div>
   );

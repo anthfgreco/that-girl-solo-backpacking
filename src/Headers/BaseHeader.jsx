@@ -43,7 +43,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
         >
           <NavLink
             to="/"
-            className="p-4"
+            className="mt-8 p-4 lg:mt-0"
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => setIsNavOpen(false)}
           >

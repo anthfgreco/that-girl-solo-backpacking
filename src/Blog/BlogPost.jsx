@@ -61,6 +61,7 @@ function BlogPost() {
           children={fetchedPost.content}
           components={markdownComponents}
         />
+        <br />
       </article>
     </div>
   );
