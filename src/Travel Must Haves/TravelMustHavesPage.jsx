@@ -25,6 +25,15 @@ function TravelMustHavesPage() {
         <li>Travel adapter</li>
         <li>Packing cubes </li>
         <li>Locker lock</li>
+        <li>
+          <a
+            href="https://open.spotify.com/user/22pepgpr7ea5fux2n6tpr3dnq?si=43ae3b40d2964cfd"
+            target="_blank"
+            className="text-violet-500 hover:text-violet-800"
+          >
+            My Travel Bestie Spotify Playlist
+          </a>
+        </li>
       </ol>
     </div>
   );

@@ -76,7 +76,7 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
             style={({ isActive }) => (isActive ? activeStyle : undefined)}
             onClick={() => setIsNavOpen(false)}
           >
-            Travel Girlie Must-Haves
+            Travel Must-Haves
           </NavLink>
 
           <NavLink
