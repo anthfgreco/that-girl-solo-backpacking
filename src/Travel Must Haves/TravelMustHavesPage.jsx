@@ -5,6 +5,16 @@ function TravelMustHavesPage() {
     <div className="">
       <SolidHeader />
       <ol className="mx-10 mb-6 list-decimal space-y-2 leading-relaxed lg:mx-auto lg:max-w-[550px]">
+        <li>
+          <a
+            href="https://www.amazon.ca/dp/B0BR9M7LXJ"
+            target="_blank"
+            className="text-violet-500 hover:text-violet-800"
+          >
+            That Girl Solo Backpacking: 99 Travel Journal Prompts For The
+            Wanderers, The Adventurers, The Dreamers
+          </a>
+        </li>
         <li>Back-up battery pack </li>
         <li>Micro fiber Towel </li>
         <li>Bum bag </li>
