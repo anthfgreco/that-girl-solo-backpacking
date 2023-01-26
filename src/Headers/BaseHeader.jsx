@@ -59,7 +59,6 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
             Blog
           </NavLink>
 
-          {/*
           <NavLink
             to="/destinations"
             className="p-4"
@@ -68,7 +67,6 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
           >
             Destinations
           </NavLink>
-          */}
 
           <NavLink
             to="/travel-must-haves"
