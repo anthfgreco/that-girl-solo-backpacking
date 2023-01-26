@@ -86,7 +86,6 @@ function DestinationsPage() {
                     setTooltipContent(country);
                   }}
                   onMouseEnter={() => {
-                    console.log(country);
                     setTooltipContent(country);
                   }}
                   onMouseLeave={() => {
