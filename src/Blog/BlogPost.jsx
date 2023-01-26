@@ -40,7 +40,7 @@ function BlogPost() {
 
       <div
         className="fixed -z-10 h-screen w-screen bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${"/images/" + fetchedPost.image})` }}
+        style={{ backgroundImage: `url(${"images/" + fetchedPost.image})` }}
       ></div>
       <div className="flex h-screen flex-col items-center justify-center bg-black bg-opacity-25">
         <h1 className="mx-auto mb-4 text-center font-annieUseYourTelescope text-5xl tracking-wider text-white lg:mx-60">
