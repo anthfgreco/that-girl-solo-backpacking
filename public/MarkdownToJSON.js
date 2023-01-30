@@ -1,8 +1,9 @@
 import fs from "fs";
+import prettier from "prettier";
 
 const markdownFolderPath = "public/posts";
-let postlist = [];
 const writeJsonPath = "src/posts.json";
+let postlist = [];
 
 // Find the indices of the start and end of the metadata lines in the markdown file
 function getMetadataIndices(acc, elem, i) {
@@ -64,19 +65,22 @@ const getPosts = () => {
           image: metadata.image ? metadata.image : "No image given",
           content: content ? content : "No content given",
         };
-        console.log(post);
-        console.log();
         postlist.push(post);
-        if (i === files.length - 1) {
+        if (postlist.length == files.length) {
           const sortedList = postlist.sort((a, b) => {
             return a.id < b.id ? 1 : -1;
           });
           let data = JSON.stringify(sortedList);
+          data = prettier.format(data, { parser: "json" });
           fs.writeFileSync(writeJsonPath, data);
+          console.log(
+            `\nSuccessfully wrote ${postlist.length} files to ${writeJsonPath}`
+          );
         }
       });
     });
   });
+
   return;
 };
 
