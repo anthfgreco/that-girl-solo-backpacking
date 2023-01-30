@@ -11,5 +11,3 @@ function App() {
 }
 
 export default App;
-
-// <div className="mx-10 lg:mx-auto lg:max-w-[675px]">

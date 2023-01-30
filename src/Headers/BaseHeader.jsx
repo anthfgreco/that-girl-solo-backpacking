@@ -1,31 +1,36 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation, NavLink } from "react-router-dom";
-import { FaBars, FaSearch, FaTiktok, FaEnvelope } from "react-icons/fa";
+import { Link, NavLink } from "react-router-dom";
+import { FaBars, FaTiktok } from "react-icons/fa";
+import classNames from "classnames";
 
 function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
   let activeStyle = {};
 
   return (
     <div
-      className={`fixed flex h-16 w-screen flex-col p-3 lg:flex-row lg:place-content-between lg:items-center ${
-        isHeaderTransparent
-          ? "bg-gradient-to-b from-black/25 text-white"
-          : "bg-white text-black"
-      }`}
+      className={classNames(
+        "fixed flex h-16 w-screen",
+        {
+          "bg-gradient-to-b from-black/25 text-white": isHeaderTransparent,
+        },
+        {
+          "bg-white text-black": !isHeaderTransparent,
+        }
+      )}
     >
-      {/* Hamburger icon for small screen or title for large screen */}
-      <div className="flex w-full items-center justify-center lg:w-fit">
+      <div className="flex w-full items-center xl:w-fit">
         <Link
           to="/"
-          className={`p-2 ${isHeaderTransparent ? "hidden" : "block"}`}
+          className={classNames("m-0 p-2 sm:ml-6", {
+            hidden: isHeaderTransparent,
+          })}
         >
-          <header className="whitespace-nowrap font-annieUseYourTelescope text-3xl lg:text-4xl">
+          <header className="whitespace-nowrap font-annieUseYourTelescope text-3xl xl:text-4xl">
             That Girl Solo Backpacking
           </header>
         </Link>
 
         <button
-          className="ml-auto p-2 text-2xl lg:hidden"
+          className="ml-auto mr-2 p-2 text-2xl xl:hidden"
           onClick={() => setIsNavOpen(!isNavOpen)}
         >
           <FaBars />
@@ -33,16 +38,20 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
       </div>
 
       <nav
-        className={`font-annieUseYourTelescope text-2xl ${
-          isNavOpen
-            ? "fixed left-0 top-0 flex h-screen w-2/3 flex-col bg-white pl-2 text-black"
-            : "hidden items-center lg:flex lg:flex-row"
-        }
-          `}
+        className={classNames(
+          "ml-auto font-annieUseYourTelescope text-2xl",
+          {
+            "fixed left-0 top-0 z-20 flex h-screen flex-col bg-white px-4 pl-2 text-black":
+              isNavOpen,
+          },
+          {
+            "hidden items-center xl:flex": !isNavOpen,
+          }
+        )}
       >
         <NavLink
           to="/"
-          className="mt-8 p-4 lg:mt-0"
+          className="mt-8 p-4 xl:mt-0"
           style={({ isActive }) => (isActive ? activeStyle : undefined)}
           onClick={() => setIsNavOpen(false)}
         >
@@ -95,9 +104,12 @@ function Header({ isNavOpen, isHeaderTransparent, setIsNavOpen }) {
       </nav>
 
       <div
-        className={`fixed right-0 top-0 h-screen w-1/3 bg-black opacity-75 ${
-          isNavOpen ? "" : "hidden"
-        }`}
+        className={classNames(
+          "fixed right-0 top-0 z-0 h-screen w-full bg-black opacity-75",
+          {
+            hidden: !isNavOpen,
+          }
+        )}
         onClick={() => setIsNavOpen(false)}
       ></div>
     </div>
