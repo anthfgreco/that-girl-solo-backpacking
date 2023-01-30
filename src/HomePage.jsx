@@ -22,7 +22,7 @@ function HomePage() {
   return (
     <div>
       <PageTemplate
-        backgroundImageURL="url('/images/pexels-roberto-nickson-2559941.jpg')"
+        backgroundImageURL="url('images/pexels-roberto-nickson-2559941.jpg')"
         title="That Girl Solo Backpacking"
         date=""
         markdown={markdown}
