@@ -1,9 +1,4 @@
-import { useState, useEffect } from "react";
-import ReactMarkdown from "react-markdown";
-import { FaArrowDown } from "react-icons/fa";
-
-import markdownComponents from "./MarkdownStyling";
-import TransparentHeader from "./Headers/TransparentHeader";
+import PageTemplate from "./PageTemplate";
 
 let markdown = `
   Three years ago, my life felt static. I was stuck in a job I was over-qualified for, making a crappy salary. The upside was that I had an incredible boss who let me disappear to the other side of the world on a whim when I couldn’t figure out what came next and needed some *inspiration*.
@@ -24,48 +19,14 @@ let markdown = `
   `;
 
 function HomePage() {
-  const [arrowOpacity, setArrowOpacity] = useState(1.0);
-
-  // Scroll listener
-  // Resize listener to make arrow responsive to window resizing
-  useEffect(() => {
-    window.addEventListener("scroll", updateArrow);
-    window.addEventListener("resize", updateArrow);
-    return () => {
-      window.removeEventListener("scroll", updateArrow);
-      window.removeEventListener("resize", updateArrow);
-    };
-  }, []);
-
-  function updateArrow() {
-    let opacity = 1 - window.scrollY / (window.innerHeight / 2);
-    setArrowOpacity(opacity);
-  }
-
   return (
-    <div className="">
-      <TransparentHeader />
-      <div className="fixed -z-10 h-screen w-screen bg-[url('/images/pexels-roberto-nickson-2559941.jpg')] bg-center bg-no-repeat" />
-      <div className="flex h-screen flex-col items-center justify-center bg-black bg-opacity-10">
-        <h1 className="mx-auto text-center font-annieUseYourTelescope text-6xl tracking-wider text-white">
-          That Girl Solo Backpacking
-        </h1>
-
-        <span
-          className="absolute bottom-1 animate-bounce text-2xl text-white"
-          style={{ opacity: arrowOpacity }}
-        >
-          <FaArrowDown />
-        </span>
-      </div>
-
-      <div className="bg-white">
-        <br />
-        <article>
-          <ReactMarkdown children={markdown} components={markdownComponents} />
-        </article>
-        <br />
-      </div>
+    <div>
+      <PageTemplate
+        backgroundImageURL="url('/images/pexels-roberto-nickson-2559941.jpg')"
+        title="That Girl Solo Backpacking"
+        date=""
+        markdown={markdown}
+      />
     </div>
   );
 }
