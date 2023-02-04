@@ -1,8 +1,7 @@
-import Layout from "@/components/Layout";
+import FullImageLayout from "@/components/fullImageLayout";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import Head from "next/head";
-import Date from "@/components/Date";
-import utilStyles from "@/styles/utils.module.css";
+import Date from "@/components/date";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -23,17 +22,17 @@ export async function getStaticProps({ params }) {
 
 export default function Post({ postData }) {
   return (
-    <Layout>
+    <FullImageLayout>
       <Head>
         <title>{postData.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
-        <div className={utilStyles.lightText}>
+        <h1 className="">{postData.title}</h1>
+        <div className="">
           <Date dateString={postData.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
       </article>
-    </Layout>
+    </FullImageLayout>
   );
 }
