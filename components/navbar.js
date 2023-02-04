@@ -26,6 +26,8 @@ export default function NavBar({ transparent }) {
     setIsNavOpen(false);
   }
 
+  const svgClass = clsx({ white_svg: transparent });
+
   return (
     <div
       className={clsx(
@@ -59,6 +61,7 @@ export default function NavBar({ transparent }) {
             alt="Menu"
             width={25}
             height={25}
+            className={svgClass}
             priority
           />
         </button>
@@ -95,6 +98,7 @@ export default function NavBar({ transparent }) {
             alt="TikTok"
             width={25}
             height={25}
+            className={svgClass}
           />
         </a>
       </nav>

@@ -20,3 +20,13 @@ img {
   max-width: 100%;
   display: block;
 }
+
+/*
+Class to change SVG's to white. May as well be magic to me, see links below.
+https://stackoverflow.com/a/53336754/20600987
+https://codepen.io/sosuke/pen/Pjoqqp
+*/
+.white_svg {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+    brightness(102%) contrast(102%);
+}
