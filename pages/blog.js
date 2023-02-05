@@ -35,6 +35,7 @@ export default function Blog({ allPostsData }) {
                   src={"/images/" + image}
                   fill
                   alt=""
+                  sizes="(max-width: 768px) 100vw, 360px"
                   className="object-cover duration-100 ease-in group-hover:scale-105"
                 />
                 <div className="relative flex h-full w-full flex-col justify-end bg-black bg-opacity-50 p-6 group-hover:bg-opacity-30 md:p-3">
