@@ -3,7 +3,7 @@ import Head from "next/head";
 
 export default function Contact() {
   return (
-    <BlankLayout>
+    <BlankLayout column>
       <Head>
         <title>Contact</title>
       </Head>

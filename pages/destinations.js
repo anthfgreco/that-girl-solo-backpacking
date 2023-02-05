@@ -1,13 +1,13 @@
-import FullImageLayout from "@/components/fullImageLayout";
+import BlankLayout from "@/components/blankLayout";
 import Head from "next/head";
 
 export default function Destinations() {
   return (
-    <FullImageLayout>
+    <BlankLayout>
       <Head>
         <title>Destinations</title>
       </Head>
       <div></div>
-    </FullImageLayout>
+    </BlankLayout>
   );
 }

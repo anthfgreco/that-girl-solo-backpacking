@@ -28,7 +28,7 @@ export default function FullImageLayout({ children }) {
     <div className="">
       <NavBar transparent={isTransparent} />
 
-      <div className="fixed top-0 -z-10 h-screen w-screen bg-yellow-400 bg-opacity-70">
+      <div className="fixed top-0 -z-10 h-screen w-screen">
         <Image
           src="/images/pexels-roberto-nickson-2559941.jpg"
           alt=""
