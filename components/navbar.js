@@ -40,8 +40,8 @@ export default function NavBar({ transparent }) {
         }
       )}
     >
-      <div className="flex w-full items-center xl:w-fit">
-        <header className="whitespace-nowrap text-xl xl:text-3xl">
+      <div className="flex w-full items-center lg:w-fit">
+        <header className="whitespace-nowrap text-xl lg:text-3xl">
           <Link
             href="/"
             className={clsx("p-2", {
@@ -53,7 +53,7 @@ export default function NavBar({ transparent }) {
         </header>
 
         <button
-          className="relative ml-auto mr-4 p-2 xl:hidden"
+          className="relative ml-auto mr-4 p-2 lg:hidden"
           onClick={() => toggleNav()}
         >
           <Image
@@ -62,7 +62,6 @@ export default function NavBar({ transparent }) {
             width={25}
             height={25}
             className={svgClass}
-            priority
           />
         </button>
       </div>
@@ -75,7 +74,7 @@ export default function NavBar({ transparent }) {
               isNavOpen,
           },
           {
-            "hidden items-center xl:flex": !isNavOpen,
+            "hidden items-center lg:flex": !isNavOpen,
           }
         )}
       >

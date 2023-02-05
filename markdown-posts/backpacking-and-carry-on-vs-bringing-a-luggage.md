@@ -1,5 +1,5 @@
 ---
-title: "The benefits of backpacking + carry-on, versus bringing a luggage"
+title: "Backpacking and carry-on vs. bringing a luggage"
 date: "2022-12-14"
 image: "luggage.jpg"
 ---

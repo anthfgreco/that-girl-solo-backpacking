@@ -12,6 +12,11 @@ body {
   font-size: 18px;
 }
 
+.DEBUGGING_ONLY {
+  outline: limegreen solid 1px;
+  outline-style: dashed;
+}
+
 * {
   box-sizing: border-box;
 }
