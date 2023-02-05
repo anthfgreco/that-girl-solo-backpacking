@@ -26,8 +26,6 @@ export default function NavBar({ transparent }) {
     setIsNavOpen(false);
   }
 
-  const svgClass = clsx({ white_svg: transparent });
-
   return (
     <div
       className={clsx(
@@ -59,9 +57,8 @@ export default function NavBar({ transparent }) {
           <Image
             src="/images/hamburger-menu-icon.svg"
             alt="Menu"
-            width={25}
-            height={25}
-            className={svgClass}
+            fill
+            className={clsx({ white_svg: transparent })}
           />
         </button>
       </div>
@@ -90,15 +87,16 @@ export default function NavBar({ transparent }) {
           href="https://www.tiktok.com/@thatgirlsolobackpacking"
           target="_blank"
           rel="noreferrer"
-          className="p-2"
+          className="mr-3 p-2"
         >
-          <Image
-            src="/images/tiktok-icon.svg"
-            alt="TikTok"
-            width={25}
-            height={25}
-            className={svgClass}
-          />
+          <div className="relative h-6 w-6">
+            <Image
+              src="/images/tiktok-icon.svg"
+              alt="TikTok"
+              fill
+              className={clsx({ white_svg: transparent && !isNavOpen })}
+            />
+          </div>
         </a>
       </nav>
 

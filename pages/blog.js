@@ -26,29 +26,28 @@ export default function Blog({ allPostsData }) {
 
         <div className="flex flex-wrap justify-center">
           {allPostsData.map(({ id, date, title, image }) => (
-            <div
+            <Link
+              href={`/blog/${id}`}
               key={id}
               className="group relative m-6 h-80 w-full overflow-hidden rounded-md md:h-52 md:w-80"
             >
-              <Link href={`/blog/${id}`}>
-                <Image
-                  src={"/images/" + image}
-                  fill
-                  alt=""
-                  sizes="(max-width: 768px) 100vw, 360px"
-                  className="object-cover duration-100 ease-in group-hover:scale-105"
-                />
-                <div className="relative flex h-full w-full flex-col justify-end bg-black bg-opacity-50 p-6 group-hover:bg-opacity-30 md:p-3">
-                  <span className="mb-3 text-xl font-semibold text-white">
-                    {title}
-                  </span>
+              <Image
+                src={"/images/" + image}
+                fill
+                alt=""
+                sizes="(max-width: 768px) 100vw, 360px"
+                className="object-cover duration-100 ease-in group-hover:scale-105"
+              />
+              <div className="relative flex h-full w-full flex-col justify-end bg-black bg-opacity-50 p-6 group-hover:bg-opacity-30 md:p-3">
+                <span className="mb-3 text-xl font-semibold text-white">
+                  {title}
+                </span>
 
-                  <span className="text-sm font-semibold text-gray-300">
-                    <Date dateString={date} />
-                  </span>
-                </div>
-              </Link>
-            </div>
+                <span className="text-sm font-semibold text-gray-300">
+                  <Date dateString={date} />
+                </span>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
