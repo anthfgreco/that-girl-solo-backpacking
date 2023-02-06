@@ -21,7 +21,6 @@ export default function Home({ allPostsData }) {
     >
       <Head>
         <title>That Girl Solo Backpacking</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div>
         <section></section>

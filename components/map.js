@@ -1,9 +1,6 @@
 import { useEffect, useState } from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps";
 
-const geoUrl =
-  "https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries-sans-antarctica.json";
-
 const visitedCountries = new Set([
   "United States of America",
   "Canada",
@@ -26,7 +23,7 @@ const visitedCountries = new Set([
   "France",
 ]);
 
-export default function Map({ widthClass }) {
+export default function Map({ TopoJSON, widthClass }) {
   const [tooltipContent, setTooltipContent] = useState("");
   const [mousePosition, setMousePosition] = useState({ x: null, y: null });
 
@@ -62,7 +59,7 @@ export default function Map({ widthClass }) {
         }}
         height={700}
       >
-        <Geographies geography={geoUrl}>
+        <Geographies geography={TopoJSON}>
           {({ geographies }) =>
             geographies.map((geo) => {
               const country = geo.properties.name;

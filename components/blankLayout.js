@@ -9,11 +9,7 @@ export default function BlankLayout({ children, column }) {
     <div className="">
       <NavBar />
       <div className="h-16"></div>
-      <main
-        className={clsx({
-          "mx-auto max-w-[550px]": column,
-        })}
-      >
+      <main className={clsx({ "mx-auto max-w-[600px] px-6": column })}>
         {children}
       </main>
     </div>
