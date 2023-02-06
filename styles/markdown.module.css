@@ -1,0 +1,26 @@
+.markdown h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.markdown p {
+  margin-bottom: 25px;
+}
+
+.markdown ul {
+  list-style-type: circle;
+}
+
+.markdown ol {
+  list-style-type: decimal;
+}
+
+.markdown ol,
+.markdown ul {
+  list-style-position: inside;
+  margin-bottom: 25px;
+}
+
+.markdown li {
+  margin-bottom: 15px;
+}

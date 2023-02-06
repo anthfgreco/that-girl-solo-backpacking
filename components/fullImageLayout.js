@@ -4,8 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import NavBar from "@/components/navbar";
 import Date from "@/components/date";
+import clsx from "clsx";
 
-export default function FullImageLayout({ children, imageURL, title, date }) {
+export default function FullImageLayout({
+  children,
+  imageURL,
+  title,
+  date,
+  column,
+}) {
   const [isTransparent, setTransparency] = useState(true);
 
   // Make header responsive to scrolling + window resizing
@@ -39,7 +46,7 @@ export default function FullImageLayout({ children, imageURL, title, date }) {
         <div className="relative h-full w-full bg-black bg-opacity-50" />
       </div>
 
-      <div className="flex h-screen w-screen flex-col items-center justify-center">
+      <div className="flex h-screen flex-col items-center justify-center">
         <span className="px-3 text-center text-white">
           <h1 className="text-center text-4xl text-white">{title}</h1>
           <br />
@@ -51,7 +58,13 @@ export default function FullImageLayout({ children, imageURL, title, date }) {
         </span>
       </div>
 
-      <main className="w-full bg-white">{children}</main>
+      <main className="w-full bg-white">
+        <div className={clsx({ "mx-auto max-w-[600px] px-6": column })}>
+          <br />
+          {children}
+          <br />
+        </div>
+      </main>
     </div>
   );
 }

@@ -2,6 +2,7 @@ import FullImageLayout from "@/components/fullImageLayout";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 import Head from "next/head";
 import Date from "@/components/date";
+import markdownStyles from "@/styles/markdown.module.css";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -24,16 +25,16 @@ export default function Post({ postData }) {
   const { title, date, image, id, contentHtml } = postData;
 
   return (
-    <FullImageLayout imageURL={image} title={title} date={date}>
+    <FullImageLayout imageURL={image} title={title} date={date} column>
       <Head>
         <title>{title}</title>
       </Head>
+
       <article>
-        <h1 className="">{title}</h1>
-        <div className="">
-          <Date dateString={date} />
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: contentHtml }}
+          className={markdownStyles.markdown}
+        />
       </article>
     </FullImageLayout>
   );
