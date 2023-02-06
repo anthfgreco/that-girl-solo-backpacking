@@ -1,5 +1,6 @@
 import BlankLayout from "@/components/blankLayout";
 import Head from "next/head";
+import Map from "@/components/map";
 
 export default function Destinations() {
   return (
@@ -7,7 +8,8 @@ export default function Destinations() {
       <Head>
         <title>Destinations</title>
       </Head>
-      <div></div>
+
+      <Map widthClass={"w-full"} />
     </BlankLayout>
   );
 }
