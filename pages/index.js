@@ -15,7 +15,7 @@ export async function getStaticProps() {
 
 export default function Home({ allPostsData }) {
   return (
-    <FullImageLayout>
+    <FullImageLayout imageURL={"pexels-roberto-nickson-2559941.jpg"}>
       <Head>
         <title>That Girl Solo Backpacking</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

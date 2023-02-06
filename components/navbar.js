@@ -51,15 +51,17 @@ export default function NavBar({ transparent }) {
         </header>
 
         <button
-          className="relative ml-auto mr-4 p-2 lg:hidden"
+          className="ml-auto mr-2 p-3 lg:hidden"
           onClick={() => toggleNav()}
         >
-          <Image
-            src="/images/hamburger-menu-icon.svg"
-            alt="Menu"
-            fill
-            className={clsx({ white_svg: transparent })}
-          />
+          <div className="relative h-6 w-6">
+            <Image
+              src="/images/hamburger-menu-icon.svg"
+              alt="Menu"
+              fill
+              className={clsx({ white_svg: transparent })}
+            />
+          </div>
         </button>
       </div>
 

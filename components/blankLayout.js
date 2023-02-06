@@ -19,11 +19,3 @@ export default function BlankLayout({ children, column }) {
     </div>
   );
 }
-
-/*
-{!home && (
-  <div className="">
-    <Link href="/">← Back to home</Link>
-  </div>
-)}
-*/

@@ -21,17 +21,19 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
+  const { title, date, image, id, contentHtml } = postData;
+
   return (
-    <FullImageLayout>
+    <FullImageLayout imageURL={image} title={title} date={date}>
       <Head>
-        <title>{postData.title}</title>
+        <title>{title}</title>
       </Head>
       <article>
-        <h1 className="">{postData.title}</h1>
+        <h1 className="">{title}</h1>
         <div className="">
-          <Date dateString={postData.date} />
+          <Date dateString={date} />
         </div>
-        <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
       </article>
     </FullImageLayout>
   );
