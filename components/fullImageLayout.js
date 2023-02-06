@@ -43,9 +43,11 @@ export default function FullImageLayout({ children, imageURL, title, date }) {
         <span className="px-3 text-center text-white">
           <h1 className="text-center text-4xl text-white">{title}</h1>
           <br />
-          <p className="text-sm">
-            Posted on <Date dateString={date} />
-          </p>
+          {date && (
+            <p className="text-sm">
+              Posted on <Date dateString={date} />
+            </p>
+          )}
         </span>
       </div>
 
