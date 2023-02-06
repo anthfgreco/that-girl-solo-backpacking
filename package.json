@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@formspree/react": "^2.4.1",
     "@next/font": "13.1.6",
     "clsx": "^1.2.1",
     "date-fns": "^2.29.3",
